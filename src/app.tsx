@@ -20,7 +20,7 @@ export function App ({ handleAddTodo, Todos }: AppProps) {
     <Box w='300px'>
       <form onSubmit={handleAddTodo}>
         <Input type='text' name='todo' />
-        <button type='submit'>AtTdicionar</button>
+        <button type='submit'>Adicionar</button>
       </form>
       <List>
         <ListItem textDecoration='line-through'>iItem 1</ListItem>
