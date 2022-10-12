@@ -1,12 +1,16 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { App } from '@/app'
+import App from '@/app'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import { Todos } from '@/redux-flow/reducers/todos'
+import rootReducer from './redux-flow/reducers'
 
-const store = createStore(Todos)
-console.log('main: ', store)
+const store = createStore(rootReducer)
+
+store.subscribe(() => {
+  console.log('main: ', store.getState())
+})
 
 const rootElement = document.querySelector('[data-js="root"]')
 
@@ -17,15 +21,10 @@ if (!rootElement) {
 const root = createRoot(rootElement)
 root.render(
   <StrictMode>
-    <Provider store={store}>
-      <App
-        Todos={Todos} handleAddTodo={handleAddTodo}
-      />
-    </Provider>
+    <ChakraProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ChakraProvider>
   </StrictMode>,
 )
-
-// Mock to commit
-function handleAddTodo () {
-  console.log('delete this function')
-}

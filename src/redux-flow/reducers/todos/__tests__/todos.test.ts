@@ -1,10 +1,9 @@
-import Todos, { initialState } from './index'
-import { ADD_TODO, TOGGLE_TODO } from './action'
-/* import deepFreeze from 'deep-freeze' */
+import { initialState, reducerTodos } from '../index'
+import { ADD_TODO, TOGGLE_TODO } from '../action'
 
 describe('ToDo...', () => {
   it('should TODOS be a funciton', () => {
-    expect(Todos).not.toBeUndefined()
+    expect(reducerTodos).not.toBeUndefined()
   })
 
   it('should add a todo item', () => {
@@ -16,7 +15,7 @@ describe('ToDo...', () => {
     }
     const after = [{ id: 0, text: 'Hey', completed: false }]
 
-    expect(Todos(before, action)).toEqual(after)
+    expect(reducerTodos(before, action)).toEqual(after)
   })
 
   it('should add a new todo item', () => {
@@ -32,7 +31,7 @@ describe('ToDo...', () => {
       { id: 1, text: 'Ho', completed: false },
     ]
 
-    expect(Todos(before, action)).toEqual(after)
+    expect(reducerTodos(before, action)).toEqual(after)
   })
 
   it('should toggle first ToDo', () => {
@@ -50,7 +49,7 @@ describe('ToDo...', () => {
       { id: 0, text: 'Hey', completed: true },
       { id: 1, text: 'Ho', completed: false },
     ]
-    expect(Todos(before, action)).toEqual(after)
+    expect(reducerTodos(before, action)).toEqual(after)
   })
 
   it('should toggle second ToDo', () => {
@@ -68,21 +67,16 @@ describe('ToDo...', () => {
       { id: 0, text: 'Hey', completed: false },
       { id: 1, text: 'Ho', completed: true },
     ]
-    expect(Todos(before, action)).toEqual(after)
+    expect(reducerTodos(before, action)).toEqual(after)
   })
 
   it('should return the initialState if action is undefined', () => {
-    const before = [
-      { id: 0, text: 'Hey', completed: false },
-    ]
+    const before = [{ id: 0, text: 'Hey', completed: false }]
 
     const action = {}
 
-    const after = [
-
-      { id: 0, text: 'Hey', completed: false },
-    ]
-    expect(Todos(before, action)).toEqual(after)
+    const after = [{ id: 0, text: 'Hey', completed: false }]
+    expect(reducerTodos(before, action)).toEqual(after)
   })
 
   it('should return the initialState if before is undefined', () => {
@@ -91,6 +85,6 @@ describe('ToDo...', () => {
     const action = {}
 
     const after = initialState
-    expect(Todos(before, action)).toEqual(after)
+    expect(reducerTodos(before, action)).toEqual(after)
   })
 })

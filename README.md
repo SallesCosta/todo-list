@@ -9,8 +9,19 @@
   </a>
 </p>
 
+<h2>Tecnologia usada</h2>
+<ul>
+  <li>React/TypeScrip </li>
+  <li>Redux</li>
+  <li>Jest</li>
+  <li>Testing library</li>
+  <li>Chakra UI</li>
+</ul>
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > Boilerplate to create React.js apps with Vite
@@ -78,15 +89,15 @@ yarn preview
 
 👤 **Fernando Daciuk**
 
-* Website: https://daciuk.dev
-* Twitter: [@fdaciuk](https://twitter.com/fdaciuk)
-* Github: [@fdaciuk](https://github.com/fdaciuk)
-* LinkedIn: [@fdaciuk](https://linkedin.com/in/fdaciuk)
-* Instagram : [@fdaciuk](https://instagram.com/fdaciuk)
+- Website: https://daciuk.dev
+- Twitter: [@fdaciuk](https://twitter.com/fdaciuk)
+- Github: [@fdaciuk](https://github.com/fdaciuk)
+- LinkedIn: [@fdaciuk](https://linkedin.com/in/fdaciuk)
+- Instagram : [@fdaciuk](https://instagram.com/fdaciuk)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fdaciuk/boilerplate-vite-react/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fdaciuk/boilerplate-vite-react/issues).
 
 ## ✨ Contributors
 
@@ -114,5 +125,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 Give a ⭐️ if this project helped you!
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
