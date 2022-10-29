@@ -48,7 +48,9 @@ Install the dependencies:
 ```sh
 yarn install
 ```
-
+```sh
+copia este
+```
 Run dev server:
 
 ```sh
